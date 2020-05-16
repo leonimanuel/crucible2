@@ -6,10 +6,14 @@
 #     https: false
 #   )
 # end
-module ApiApp
+module CrucibleApp2
+  # binding.pry
   class Application < Rails::Application
+  #   #.....
+  #   config.enable_dependency_loading = true
+		config.autoload_paths << Rails.root.join('lib')
+    # config.eager_load_paths << Rails.root.join('lib/json_web_token.rb')
     #.....
-    config.autoload_paths << Rails.root.join('lib')
-    #.....
+    # binding.pry
   end
  end
