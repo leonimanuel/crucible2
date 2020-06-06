@@ -14,7 +14,10 @@
 #       methods: [:get, :post, :put, :patch, :delete, :options, :head]
 #   end
 # end
+
+
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
+  # binding.pry
   allow do
     origins "*"
  
@@ -23,3 +26,6 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
       methods: [:get, :post, :put, :patch, :delete, :options, :head]
   end
 end
+
+
+

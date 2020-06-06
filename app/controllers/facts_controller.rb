@@ -1,11 +1,11 @@
 class FactsController < ApplicationController
 	def create
-		binding.pry
 		Fact.create(
 			content: params["selected_text"],
 			url: params["selection_url"],
 			user: User.find(1)
 		)
+		binding.pry
 	end
 
 	def index

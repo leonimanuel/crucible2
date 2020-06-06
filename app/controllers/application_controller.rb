@@ -8,6 +8,7 @@ class ApplicationController < ActionController::API
     @current_user = AuthorizeApiRequest.call(request.headers).result
     render json: { error: 'Not Authorized' }, status: 401 unless @current_user
   end
+
 	# # enable :sessions
 
 	# config.middleware.insert_before 0, Rack::Cors do
